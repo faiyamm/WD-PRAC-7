@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Astropic</title>
+</head>
+<body>
+    <div class="container">
+        <div class="space stars1"></div>
+        <div class="space stars2"></div>
+        <div class="space stars3"></div>
+        <header>
+            <h1 class="title">Astropic</h1>
+            <p class="slogan">Your Daily Dose of Cosmic Wonders</p>
+            <div class="auth-container" id="auth-container">
+                <div class="auth-links">
+                    <a href="../backend/login.php" class="auth-link">Login</a>
+                    <a href="../backend/register.php" class="auth-link">Sign Up</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="apod-container">
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                </div>
+                <div class="apod-content" id="apod-content">
+                    <h2 id="apod-title"></h2>
+                    <div class="apod-image-container">
+                        <img id="apod-image" alt="Picture of the Day">
+                    </div>
+                    <p class="apod-date" id="apod-date"></p>
+                    <p class="apod-explanation" id="apod-explanation"></p>
+                    <div class="apod-actions">
+                        <button id="favorite-btn" class="favorite-btn">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="error-message" id="error-message"></div>
+            </div>
+
+            <div class="favorites-container">
+                <h2>My Favorites</h2>
+                <div class="favorites-list" id="favorites-list">
+                    <p class="no-favorites">No favorites yet. Click "Add to Favorites" to save this cosmic wonder!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by NASA's Astronomy Picture of the Day.</p>
+            <p>&copy; 2025 Astropic. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

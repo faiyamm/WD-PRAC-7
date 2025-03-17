@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../frontend/styles.css">
+    <title>Sign Up - Astropic</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Astropic</h1>
+            <p class="slogan">Your Daily Dose of Cosmic Wonders</p>
+        </header>
+        
+        <div class="auth-form-container">
+            <form class="auth-form" action="../backend/register.php" method="post">
+                <h2>Register</h2>
+                
+                <?php if (!empty($error)): ?>
+                    <div class="alert alert-error"><?php echo $error; ?></div>
+                <?php endif; ?>
+                
+                <?php if (!empty($success)): ?>
+                    <div class="alert alert-success"><?php echo $success; ?></div>
+                <?php endif; ?>
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username ?? ''); ?>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email ?? ''); ?>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                
+                <button type="submit" class="form-submit">Register</button>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="../backend/login.php">Login</a></p>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p>Powered by NASA's Astronomy Picture of the Day.</p>
+            <p>&copy; 2025 Astropic. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
